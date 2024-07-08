@@ -1,0 +1,184 @@
+#ucmm_wpbrigade_setting form>h2 {
+    display: none;
+}
+
+#ucmm_wpbrigade_seo form>h2 {
+    display: none;
+}
+
+.ucmm-review-notice {
+    padding: 15px 15px 15px 0;
+    background-color: #fff;
+    border-radius: 3px;
+    margin: 20px 20px 0 0;
+    border-left: 4px solid transparent;
+}
+
+.ucmm-review-notice:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.ucmm-review-thumbnail {
+    width: 114px;
+    float: left;
+    line-height: 80px;
+    text-align: center;
+    border-right: 4px solid transparent;
+}
+
+.ucmm-review-thumbnail img {
+    width: 68px;
+    vertical-align: middle;
+}
+
+.ucmm-review-text {
+    overflow: hidden;
+}
+
+.ucmm-review-text h3 {
+    font-size: 24px;
+    margin: 0 0 5px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.ucmm-review-text p {
+    font-size: 13px;
+    margin: 0 0 5px;
+}
+
+.ucmm-review-ul {
+    margin: 0;
+    padding: 0;
+}
+
+.ucmm-review-ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.ucmm-review-ul li a {
+    display: inline-block;
+    color: #10738B;
+    text-decoration: none;
+    padding-left: 26px;
+    position: relative;
+}
+
+.ucmm-review-ul li a span {
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.ucmm-wpbrigade-help-page h2 {
+    padding-top: 15px;
+}
+
+.ucmm-wpbrigade-log-file {
+    background: #0085ba !important;
+    border-color: #0073aa #006799 #006799 !important;
+    -webkit-box-shadow: 0 1px 0 #006799 !important;
+    box-shadow: 0 1px 0 #006799 !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    text-shadow: 0 -1px 1px #006799, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #006799;
+}
+
+.ucmm-log-file-sniper {
+    padding: 5px;
+    display: none;
+}
+
+.ucmm-log-file-text {
+    padding: 5px;
+    display: none;
+    color: #009306;
+}
+
+
+/*--Side bar style--*/
+
+#ucmm_wpbrigade_setting {
+    width: calc( 100% - 325px);
+    float: left;
+    padding-right: 30px;
+    padding-top: 30px;
+}
+
+.ucmm-wpbrigade .wpbr-sidebar {
+    padding-top: 30px;
+    width: 295px;
+    float: right;
+    box-sizing: border-box;
+}
+
+.ucmm-wpbrigade .postbox {
+    padding: 0 10px 10px 10px;
+}
+
+.ucmm-wpbrigade .wpbr-sidebar h2 {
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+    color: #000;
+    padding-left: 30px;
+}
+
+.ucmm-wpbrigade .wpbr-sidebar ul li a {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.ucmm-wpbrigade .wpbr-sidebar .dashicons {
+    position: absolute;
+    right: 10px;
+    margin-top: 3px;
+}
+
+.ucmm-wpbrigade .wpbr-sidebar .button {
+    color: #000;
+    border-color: transparent;
+}
+
+.ucmm-wpbrigade .wpbr-sidebar .button:hover {
+    border-color: #000;
+}
+
+.ucmm-wpbrigade .wpbr-sidebar h2 .dashicons {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    font-size: 23px;
+}
+
+.ucmm-wpbrigade .wpbr-sidebar .plugins_lists a {
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.wpbr-sidebar .dashicons-twitter:before {
+    color: #1da1f2;
+}
+
+.wpbr-sidebar .dashicons-facebook:before {
+    color: #4267b2;
+}
+
+.wpbr-sidebar .dashicons-wordpress:before {
+    color: #00a0d2;
+}
+
+.ucmm-wpbrigade .plugins_lists li {
+    padding-left: 10px;
+}
+
+.ucmm-wpbrigade .plugins_lists li a:hover {
+    text-decoration: underline;
+}
