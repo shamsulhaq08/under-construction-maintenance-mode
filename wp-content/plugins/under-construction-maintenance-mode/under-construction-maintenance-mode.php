@@ -1,3 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .video-background iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+        .ucmm-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+            z-index: -1;
+        }
+        .ucmm-container {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+
+    <?php
+    function ucmm_display_background_video() {
+        $youtube_video_url = get_theme_mod('ucmm_youtube_background_video', '');
+        if (!empty($youtube_video_url)) {
+            $youtube_video_id = preg_replace('/^.*(?:youtu.be\/|v\/|u\/|embed\/|watch\?v=|watch\?[^#]*?&v=)([^#\&\?]*).*/', '$1', $youtube_video_url);
+            if (!empty($youtube_video_id)) {
+                ?>
+                <div class="video-background">
+                    <iframe src="https://www.youtube.com/embed/<?php echo esc_attr($youtube_video_id); ?>?autoplay=1&mute=1&loop=1&playlist=<?php echo esc_attr($youtube_video_id); ?>&controls=0&showinfo=0&autohide=1&modestbranding=1&iv_load_policy=3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="ucmm-overlay"></div>
+                <?php
+            }
+        }
+    }
+    ucmm_display_background_video();
+    ?>
+
+</body>
+</html>
+
+
 <?php
 /**
  * Plugin Name: Under Construction & Maintenance Mode
@@ -18,6 +90,9 @@
 /**
  *UnderConstruction main class.
  */
+
+
+ 
 
 if ( ! class_exists( 'UCMM_WPBrigade' ) ) :
 
@@ -498,79 +573,3 @@ endif;
 new UCMM_WPBrigade();
 ?>
 
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php _e('Under Construction', 'ucmm-textdomain'); ?></title>
-    <link rel="stylesheet" href="<?php echo esc_url(plugin_dir_url(__FILE__) . 'assets/css/under-construction.css'); ?>">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-        }
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1;
-        }
-        .video-background iframe {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            height: 100%;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-        }
-        .ucmm-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
-            z-index: -1;
-        }
-        .ucmm-container {
-            position: relative;
-            z-index: 2;
-            color: white;
-            text-align: center;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    </style>
-</head>
-<body>
-
-    <?php
-    function ucmm_display_background_video() {
-        $youtube_video_url = get_theme_mod('ucmm_youtube_background_video', '');
-        if ($youtube_video_url) {
-            $youtube_video_id = preg_replace('/^.*(?:youtu.be\/|v\/|u\/|embed\/|watch\?v=|watch\?[^#]*?&v=)([^#\&\?]*).*/', '$1', $youtube_video_url);
-            if ($youtube_video_id) {
-                ?>
-                <div class="video-background">
-                    <iframe src="https://www.youtube.com/embed/<?php echo esc_attr($youtube_video_id); ?>?autoplay=1&mute=1&loop=1&playlist=<?php echo esc_attr($youtube_video_id); ?>&controls=0&showinfo=0&autohide=1&modestbranding=1&iv_load_policy=3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-                <div class="ucmm-overlay"></div>
-                <?php
-            }
-        }
-    }
-    ucmm_display_background_video();
-    ?>
-
- 
-
-</body>
-</html>

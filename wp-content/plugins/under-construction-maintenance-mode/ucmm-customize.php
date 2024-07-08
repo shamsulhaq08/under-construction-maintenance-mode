@@ -42,7 +42,7 @@ function ucmm_wpbrigade_default_option_key( $ucmm_key, $ucmm_wpbrigade_array, $d
 }
 
 $ucmm_bg_mobile         = ucmm_wpbrigade_option_key( 'setting_background_mobile', $ucmm_wpbrigade_array );
-
+$ucmm_bg_video = ucmm_wpbrigade_option_key('setting_background_video', $ucmm_wpbrigade_array);
 $ucmm_bg                = ucmm_wpbrigade_option_key( 'setting_background', $ucmm_wpbrigade_array );
 $ucmm_logo              = ucmm_wpbrigade_option_key( 'ucmm_logo', $ucmm_wpbrigade_array );
 $ucmm_header            = ucmm_wpbrigade_option_key( 'header_text', $ucmm_wpbrigade_array );
